@@ -185,6 +185,24 @@ console.log( y );
 
 <!-- /.examples -->
 
+<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+
+<section class="related">
+
+* * *
+
+## See Also
+
+-   [`@stdlib/blas/base/dcopy`][@stdlib/blas/base/dcopy]: copy values from x into y.
+-   [`@stdlib/blas/base/gcopy`][@stdlib/blas/base/gcopy]: copy values from x into y.
+-   [`@stdlib/blas/base/sswap`][@stdlib/blas/base/sswap]: interchange two single-precision floating-point vectors.
+
+</section>
+
+<!-- /.related -->
+
+<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
 
 <section class="main-repo" >
 
@@ -247,6 +265,16 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [mdn-float32array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
+
+<!-- <related-links> -->
+
+[@stdlib/blas/base/dcopy]: https://github.com/stdlib-js/blas-base-dcopy
+
+[@stdlib/blas/base/gcopy]: https://github.com/stdlib-js/blas-base-gcopy
+
+[@stdlib/blas/base/sswap]: https://github.com/stdlib-js/blas-base-sswap
+
+<!-- </related-links> -->
 
 </section>
 
