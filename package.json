@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/blas-base-scopy",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Copy values from x into y.",
   "license": "Apache-2.0",
   "author": {
