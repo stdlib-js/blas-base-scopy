@@ -24,32 +24,30 @@ limitations under the License.
 
 > Copy values from `x` into `y`.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/blas-base-scopy
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-scopy = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-scopy@umd/bundle.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-scopy@umd/bundle.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.scopy;
-})();
-</script>
+var scopy = require( '@stdlib/blas-base-scopy' );
 ```
 
 #### scopy( N, x, strideX, y, strideY )
@@ -167,16 +165,11 @@ scopy.ndarray( N, x, 2, 1, y, -1, y.length-1 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/bundle.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@umd/bundle.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@umd/bundle.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-scopy@umd/bundle.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var randu = require( '@stdlib/random-base-randu' );
+var round = require( '@stdlib/math-base-special-round' );
+var Float32Array = require( '@stdlib/array-float32' );
+var scopy = require( '@stdlib/blas-base-scopy' );
 
 var x;
 var y;
@@ -194,11 +187,6 @@ console.log( y );
 // Copy elements from `x` into `y` starting from the end of `y`:
 scopy( x.length, x, 1, y, -1 );
 console.log( y );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -286,6 +274,7 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 [deno-url]: https://github.com/stdlib-js/blas-base-scopy/tree/deno
 [umd-url]: https://github.com/stdlib-js/blas-base-scopy/tree/umd
 [esm-url]: https://github.com/stdlib-js/blas-base-scopy/tree/esm
+[branches-url]: https://github.com/stdlib-js/blas-base-scopy/blob/main/branches.md
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/blas-base-scopy/main/LICENSE
 
@@ -299,11 +288,11 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/blas/base/dcopy]: https://github.com/stdlib-js/blas-base-dcopy/tree/umd
+[@stdlib/blas/base/dcopy]: https://github.com/stdlib-js/blas-base-dcopy
 
-[@stdlib/blas/base/gcopy]: https://github.com/stdlib-js/blas-base-gcopy/tree/umd
+[@stdlib/blas/base/gcopy]: https://github.com/stdlib-js/blas-base-gcopy
 
-[@stdlib/blas/base/sswap]: https://github.com/stdlib-js/blas-base-sswap/tree/umd
+[@stdlib/blas/base/sswap]: https://github.com/stdlib-js/blas-base-sswap
 
 <!-- </related-links> -->
 
