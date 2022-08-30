@@ -31,7 +31,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import scopy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-scopy@deno/mod.js';
+import scopy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-scopy@v0.0.8-deno/mod.js';
 ```
 
 #### scopy( N, x, strideX, y, strideY )
@@ -153,7 +153,7 @@ scopy.ndarray( N, x, 2, 1, y, -1, y.length-1 );
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
 import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@deno/mod.js';
 import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@deno/mod.js';
-import scopy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-scopy@deno/mod.js';
+import scopy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-scopy@v0.0.8-deno/mod.js';
 
 var x;
 var y;
