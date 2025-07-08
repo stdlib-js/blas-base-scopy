@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-07)
+## Unreleased (2025-07-08)
 
 <section class="features">
 
@@ -16,12 +16,23 @@
 
 <!-- /.features -->
 
+<section class="bug-fixes">
+
+### Bug Fixes
+
+-   [`e039f2a`](https://github.com/stdlib-js/stdlib/commit/e039f2a6f7ff1b4141dba2d0f5a2fb8a03d7a9b8) - consistently use constants instead of hardcoded numbers in unrolled BLAS loops
+
+</section>
+
+<!-- /.bug-fixes -->
+
 <section class="commits">
 
 ### Commits
 
 <details>
 
+-   [`e039f2a`](https://github.com/stdlib-js/stdlib/commit/e039f2a6f7ff1b4141dba2d0f5a2fb8a03d7a9b8) - **fix:** consistently use constants instead of hardcoded numbers in unrolled BLAS loops _(by Philipp Burckhardt)_
 -   [`09c9ceb`](https://github.com/stdlib-js/stdlib/commit/09c9ceb58c6dd23c10f1980094851983c57d693f) - **chore:** fix formatting _(by Athan Reines)_
 -   [`51bf6f9`](https://github.com/stdlib-js/stdlib/commit/51bf6f9d2bb027aacecda87e02f957badbc246b0) - **bench:** fix formatting _(by Athan Reines)_
 -   [`62364f6`](https://github.com/stdlib-js/stdlib/commit/62364f62ea823a3b52c2ad25660ecd80c71f8f36) - **style:** fix C comment alignment _(by Philipp Burckhardt)_
