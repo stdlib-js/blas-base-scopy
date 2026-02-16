@@ -35,43 +35,32 @@ limitations under the License.
 
 > Copy values from `x` into `y`.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/blas-base-scopy
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-scopy = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-scopy@umd/browser.js' )
-```
-The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/blas-base-scopy/tags). For example,
-
-```javascript
-scopy = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-scopy@v0.3.1-umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var scopy = require( 'path/to/vendor/umd/blas-base-scopy/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-scopy@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.scopy;
-})();
-</script>
+var scopy = require( '@stdlib/blas-base-scopy' );
 ```
 
 #### scopy( N, x, strideX, y, strideY )
@@ -180,14 +169,9 @@ scopy.ndarray( 3, x, 2, 1, y, -1, y.length-1 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-scopy@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var scopy = require( '@stdlib/blas-base-scopy' );
 
 var opts = {
     'dtype': 'float32'
@@ -201,11 +185,6 @@ console.log( y );
 // Copy elements from `x` into `y` starting from the end of `y`:
 scopy( x.length, x, 1, y, -1 );
 console.log( y );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -214,7 +193,137 @@ console.log( y );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/blas/base/scopy.h"
+```
+
+#### c_scopy( N, \*X, strideX, \*Y, strideY )
+
+Copies values from `X` into `Y`.
+
+```c
+const float x[] = { 1.0f, 2.0f, 3.0f, 4.0f };
+float y[] = { 0.0f, 0.0f, 0.0f, 0.0f };
+
+c_scopy( 4, x, 1, y, 1 );
+```
+
+The function accepts the following arguments:
+
+-   **N**: `[in] CBLAS_INT` number of indexed elements.
+-   **X**: `[in] float*` input array.
+-   **strideX**: `[in] CBLAS_INT` index increment for `X`.
+-   **Y**: `[out] float*` output array.
+-   **strideY**: `[in] CBLAS_INT` index increment for `Y`.
+
+```c
+void c_scopy( const CBLAS_INT N, const float *X, const CBLAS_INT strideX, float *Y, const CBLAS_INT strideY );
+```
+
+#### c_scopy_ndarray( N, \*X, strideX, offsetX, \*Y, strideY, offsetY )
+
+Copies values from `x` into `y` using alternative indexing semantics.
+
+```c
+const float x[] = { 1.0f, 2.0f, 3.0f, 4.0f, 5.0f };
+float y[] = { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f };
+
+c_scopy_ndarray( 3, x, 1, 2, y, 1, 2 );
+```
+
+The function accepts the following arguments:
+
+-   **N**: `[in] CBLAS_INT` number of indexed elements.
+-   **X**: `[in] float*` input array.
+-   **strideX**: `[in] CBLAS_INT` index increment for `X`.
+-   **offsetX**: `[in] CBLAS_INT` starting index for `X`.
+-   **Y**: `[out] float*` output array.
+-   **strideY**: `[in] CBLAS_INT` index increment for `Y`.
+-   **offsetY**: `[in] CBLAS_INT` starting index for `Y`.
+
+```c
+void c_scopy_ndarray( const CBLAS_INT N, const float *X, const CBLAS_INT strideX, const CBLAS_INT offsetX, float *Y, const CBLAS_INT strideY, const CBLAS_INT offsetY );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/blas/base/scopy.h"
+#include <stdio.h>
+
+int main( void ) {
+    // Create strided arrays:
+    const float x[] = { 1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f, 7.0f, 8.0f };
+    float y[] = { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f };
+
+    // Specify the number of elements:
+    const int N = 4;
+
+    // Specify stride lengths:
+    const int strideX = 2;
+    const int strideY = -2;
+
+    // Copy elements:
+    c_scopy( N, x, strideX, y, strideY );
+
+    // Print the result:
+    for ( int i = 0; i < 8; i++ ) {
+        printf( "y[ %i ] = %f\n", i, y[ i ] );
+    }
+
+    // Copy elements:
+    c_scopy_ndarray( N, x, strideX, 0, y, strideY, 6 );
+
+    // Print the result:
+    for ( int i = 0; i < 8; i++ ) {
+        printf( "y[ %i ] = %f\n", i, y[ i ] );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -271,8 +380,8 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/blas-base-scopy.svg
 [npm-url]: https://npmjs.org/package/@stdlib/blas-base-scopy
 
-[test-image]: https://github.com/stdlib-js/blas-base-scopy/actions/workflows/test.yml/badge.svg?branch=v0.3.1
-[test-url]: https://github.com/stdlib-js/blas-base-scopy/actions/workflows/test.yml?query=branch:v0.3.1
+[test-image]: https://github.com/stdlib-js/blas-base-scopy/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/blas-base-scopy/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/blas-base-scopy/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/blas-base-scopy?branch=main
@@ -314,11 +423,11 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/blas/base/dcopy]: https://github.com/stdlib-js/blas-base-dcopy/tree/umd
+[@stdlib/blas/base/dcopy]: https://github.com/stdlib-js/blas-base-dcopy
 
-[@stdlib/blas/base/gcopy]: https://github.com/stdlib-js/blas-base-gcopy/tree/umd
+[@stdlib/blas/base/gcopy]: https://github.com/stdlib-js/blas-base-gcopy
 
-[@stdlib/blas/base/sswap]: https://github.com/stdlib-js/blas-base-sswap/tree/umd
+[@stdlib/blas/base/sswap]: https://github.com/stdlib-js/blas-base-sswap
 
 <!-- </related-links> -->
 
