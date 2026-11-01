@@ -4,7 +4,29 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-10-24)
+## Unreleased (2026-11-01)
+
+<section class="bug-fixes">
+
+### Bug Fixes
+
+-   [`c73cd1e`](https://github.com/stdlib-js/stdlib/commit/c73cd1e7b32f9eb83be97050cdc0b5f605173539) - advance indices in unrolled loops of portable `dcopy` and `scopy` [(#16122)](https://github.com/stdlib-js/stdlib/pull/16122)
+
+</section>
+
+<!-- /.bug-fixes -->
+
+<section class="issues">
+
+### Closed Issues
+
+This release closes the following issue:
+
+[#15823](https://github.com/stdlib-js/stdlib/issues/15823)
+
+</section>
+
+<!-- /.issues -->
 
 <section class="commits">
 
@@ -12,6 +34,7 @@
 
 <details>
 
+-   [`c73cd1e`](https://github.com/stdlib-js/stdlib/commit/c73cd1e7b32f9eb83be97050cdc0b5f605173539) - **fix:** advance indices in unrolled loops of portable `dcopy` and `scopy` [(#16122)](https://github.com/stdlib-js/stdlib/pull/16122) _(by mantrapatel05)_
 -   [`a429a6a`](https://github.com/stdlib-js/stdlib/commit/a429a6abc8c3588478436c91a3ced18c31198948) - **bench:** refactor to use dynamic memory allocation in `blas/base/scopy` [(#10155)](https://github.com/stdlib-js/stdlib/pull/10155) _(by Prajjwal Bajpai)_
 -   [`d86efd1`](https://github.com/stdlib-js/stdlib/commit/d86efd10c0a4bc76a291c78ee8ebde52aa4f4926) - **bench:** refactor to use string interpolation in `blas/base/scopy` [(#10156)](https://github.com/stdlib-js/stdlib/pull/10156) _(by Prajjwal Bajpai)_
 
@@ -25,9 +48,10 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
 -   Prajjwal Bajpai
+-   mantrapatel05
 
 </section>
 
